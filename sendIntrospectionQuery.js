@@ -124,7 +124,7 @@ const requestOptions = {
   headers: { "user-agent": "node.js", ...argv.headers }
 };
 
-request.post(argv._[0], requestOptions, function(error, response, body) {
+request.get(argv._[0], requestOptions, function(error, response, body) {
   if (error) {
     console.error("Could not send introspection query: ", error);
     process.exit(1);
